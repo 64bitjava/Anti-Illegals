@@ -1,0 +1,35 @@
+name: AntiIllegals
+version: 1.0.0
+author: Nick Norkus
+main: me.NickNorkus.illegals.Main
+depend: [PlayerVaults]
+commands:
+  antiillegals:
+    description: Utilize the plugin
+    aliases: [ai]
+permissions:
+  ai.*:
+    description: Use all commands
+    default: false
+    children:
+      ai.reload: true
+      ai.help: true
+      ai.check: true
+      ai.exempt: true
+      ai.remove: true
+      ai.check.pv: true
+  ai.reload:
+    description: Reload the configuration
+    default: op
+  ai.help:
+    description: Show plugin help
+    default: true
+  ai.exempt:
+    description: Excempt from items removal
+    default: false
+  ai.remove:
+    description: Remove items from all players
+    default: op
+  ai.check:
+    description: Check all items from players
+    default: op
